@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+      "diy-zzhc-store-staff": "../../../zzhc/components/diy/zzhc-store-staff/index",
+      "diy-zzhc-swiper": "../../../zzhc/components/diy/zzhc-swiper/index"
+    },
+    "componentPlaceholder": {
+      "diy-zzhc-store-staff": "view",
+      "diy-zzhc-swiper": "view"
+    }
+  }
