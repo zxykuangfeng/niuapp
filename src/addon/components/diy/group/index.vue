@@ -136,8 +136,10 @@
     </view>
 </template>
 <script lang="ts" setup>
+  // #ifndef MP-TOUTIAO
    import diyZzhcStoreStaff from '@/addon/zzhc/components/diy/zzhc-store-staff/index.vue';
    import diyZzhcSwiper from '@/addon/zzhc/components/diy/zzhc-swiper/index.vue';
+     // #endif
    import topTabbar from '@/components/top-tabbar/top-tabbar.vue'
    import useDiyStore from '@/app/stores/diy';
    import { useDiyGroup } from './useDiyGroup';
