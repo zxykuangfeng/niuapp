@@ -4,7 +4,7 @@
         {
             "path": "app/pages/index/index",
             "style": {
-                // #ifndef H5
+                // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.index.index%",
@@ -19,15 +19,17 @@
         {
             "path": "app/pages/index/tabbar",
             "style": {
-                "navigationStyle": "custom"
+                    // #ifndef H5 && MP-TOUTIAO
+                    "navigationStyle": "custom",
+                    // #endif
             }
         },
         {
             "path": "app/pages/auth/index",
             "style": {
-                // #ifndef H5
-                "navigationStyle": "custom",
-                // #endif
+                 // #ifndef H5 && MP-TOUTIAO
+                 "navigationStyle": "custom",
+                 // #endif
                 "navigationBarTitleText": "%pages.auth.index%"
             }
         },
@@ -40,7 +42,7 @@
         {
             "path": "app/pages/auth/bind",
             "style": {
-                // #ifndef H5
+                // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.auth.bind%"
@@ -49,7 +51,7 @@
         {
             "path": "app/pages/auth/login",
             "style": {
-                // #ifndef H5
+                 // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.auth.login%"
@@ -58,7 +60,7 @@
         {
             "path": "app/pages/auth/register",
             "style": {
-                // #ifndef H5
+             // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.auth.register%"
@@ -67,7 +69,7 @@
         {
             "path": "app/pages/auth/resetpwd",
             "style": {
-                // #ifndef H5
+                // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.auth.resetpwd%"
@@ -76,7 +78,7 @@
         {
             "path": "app/pages/index/diy",
             "style": {
-                // #ifndef H5
+                 // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.index.diy%",
@@ -91,7 +93,7 @@
         {
             "path": "app/pages/index/diy_form",
             "style": {
-                // #ifndef H5
+                 // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.index.diy_form%",
@@ -106,7 +108,7 @@
         {
             "path": "app/pages/index/diy_form_result",
             "style": {
-                // #ifndef H5
+                // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.index.diy_form_result%"
@@ -141,7 +143,7 @@
         {
             "path": "app/pages/pay/result",
             "style": {
-                // #ifndef H5
+                 // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.pay.result%"
@@ -203,7 +205,7 @@
         {
             "path": "app/pages/friendspay/share",
             "style": {
-                // #ifndef H5
+                // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.friendspay.share%"
@@ -213,7 +215,7 @@
         {
             "path": "app/pages/friendspay/money",
             "style": {
-                // #ifndef H5
+                 // #ifndef H5 && MP-TOUTIAO
                 "navigationStyle": "custom",
                 // #endif
                 "navigationBarTitleText": "%pages.friendspay.money%"
@@ -384,7 +386,7 @@
                 {
                     "path": "commission",
                     "style": {
-                        // #ifndef H5
+                        // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.commission%"
@@ -394,7 +396,7 @@
                 {
                     "path": "balance",
                     "style": {
-                        // #ifndef H5
+                         // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.balance%"
@@ -404,7 +406,7 @@
                 {
                     "path": "level",
                     "style": {
-                        // #ifndef H5
+                        // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.level%"
@@ -432,7 +434,7 @@
                 {
                     "path": "index",
                     "style": {
-                        // #ifndef H5
+                        // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.index%",
@@ -454,7 +456,7 @@
                 {
                     "path": "point",
                     "style": {
-                        // #ifndef H5
+                         // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.point%"
@@ -499,7 +501,7 @@
                 {
                     "path": "sign_in",
                     "style": {
-                        // #ifndef H5
+                        // #ifndef H5 && MP-TOUTIAO
                         "navigationStyle": "custom",
                         // #endif
                         "navigationBarTitleText": "%pages.member.sign_in%"
