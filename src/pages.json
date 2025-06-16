@@ -232,7 +232,9 @@
 				    "path": "pages/index",
 				    "style": {
 				        "navigationBarTitleText": "%zzhc.pages.index%",
+                          // #ifndef MP-TOUTIAO
 						"navigationStyle": "custom"
+                            // #endif
 				    }
 				},
 				{
