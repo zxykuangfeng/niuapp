@@ -1,11 +1,15 @@
 {
     "component": true,
     "usingComponents": {
-      "diy-zzhc-store-staff": "../../../zzhc/components/diy/zzhc-store-staff/index",
-      "diy-zzhc-swiper": "../../../zzhc/components/diy/zzhc-swiper/index"
+        // #ifndef MP-TOUTIAO
+        "diy-zzhc-store-staff": "../../../zzhc/components/diy/zzhc-store-staff/index",
+        "diy-zzhc-swiper": "../../../zzhc/components/diy/zzhc-swiper/index"
+        // #endif
     },
     "componentPlaceholder": {
-      "diy-zzhc-store-staff": "view",
-      "diy-zzhc-swiper": "view"
+              // #ifndef MP-TOUTIAO
+              "diy-zzhc-store-staff": "view",
+              "diy-zzhc-swiper": "view"
+              // #endif
     }
   }

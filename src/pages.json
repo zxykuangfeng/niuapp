@@ -542,6 +542,10 @@
             "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue",
             "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
             "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+            // #ifndef MP-TOUTIAO
+            "diy-zzhc-store-staff": "@/addon/zzhc/components/diy/zzhc-store-staff/index.vue",
+            "diy-zzhc-swiper": "@/addon/zzhc/components/diy/zzhc-swiper/index.vue",
+            // #endif
             "diy-(\W.*)": "@/app/components/diy/$1/index.vue"
         }
     }

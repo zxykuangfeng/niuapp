@@ -121,12 +121,14 @@
             <template v-if="component.componentName == 'Text'">
                 <diy-text ref="diyTextRef" :component="component" :global="data.global" :index="index" :scrollBool="diyGroup.componentsScrollBool.Text" />
             </template>
+            <!-- #ifndef MP-TOUTIAO -->
             <template v-if="component.componentName == 'ZzhcStoreStaff'">
                 <diy-zzhc-store-staff ref="diyZzhcStoreStaffRef" :component="component" :global="data.global" :index="index" :scrollBool="diyGroup.componentsScrollBool.ZzhcStoreStaff" />
             </template>
             <template v-if="component.componentName == 'ZzhcSwiper'">
                 <diy-zzhc-swiper ref="diyZzhcSwiperRef" :component="component" :global="data.global" :index="index" :scrollBool="diyGroup.componentsScrollBool.ZzhcSwiper" />
             </template>
+                     <!-- #endif -->
             </view>
         </view>
         <template v-if="diyStore.mode == '' && data.global && data.global.bottomTabBarSwitch">
@@ -136,10 +138,10 @@
     </view>
 </template>
 <script lang="ts" setup>
-  // #ifndef MP-TOUTIAO
+   // #ifndef MP-TOUTIAO
    import diyZzhcStoreStaff from '@/addon/zzhc/components/diy/zzhc-store-staff/index.vue';
    import diyZzhcSwiper from '@/addon/zzhc/components/diy/zzhc-swiper/index.vue';
-     // #endif
+   // #endif
    import topTabbar from '@/components/top-tabbar/top-tabbar.vue'
    import useDiyStore from '@/app/stores/diy';
    import { useDiyGroup } from './useDiyGroup';
