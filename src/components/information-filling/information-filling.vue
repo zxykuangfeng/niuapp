@@ -36,7 +36,7 @@
                 </view>
             </u-form>
         </view>
-        <!-- #ifdef MP-WEIXIN -->
+       <!-- #ifdef MP-WEIXIN || MP-TOUTIAO -->
         <!-- 小程序隐私协议 -->
         <wx-privacy-popup ref="wxPrivacyPopupRef"></wx-privacy-popup>
         <!-- #endif -->
@@ -180,10 +180,10 @@ const confirm = async () => {
 
             } else {
                 // todo 如果没有登录过，则注册
-                // #ifdef MP-WEIXIN
+                //  #ifdef MP-WEIXIN || MP-TOUTIAO
                 const login = useLogin();
                 await login.getAuthCode({ backFlag: true, ...formData }); // 注册
-				show.value = false; 
+				show.value = false;
                 // #endif
             }
         } catch (error) {

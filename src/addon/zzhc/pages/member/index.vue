@@ -13,11 +13,10 @@
 			</view>
 
 		</view>
-
-		<!-- #ifdef MP-WEIXIN -->
-		<!-- 小程序隐私协议 -->
-		<wx-privacy-popup ref="wxPrivacyPopupRef"></wx-privacy-popup>
-		<!-- #endif -->
+    <!-- #ifdef MP-WEIXIN || MP-TOUTIAO -->
+                <!-- 小程序隐私协议 -->
+                <wx-privacy-popup ref="wxPrivacyPopupRef"></wx-privacy-popup>
+                <!-- #endif -->
 
 	</view>
 </template>

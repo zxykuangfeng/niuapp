@@ -109,7 +109,7 @@ onLaunch((data: any) => {
                     const memberInfo = useMemberStore().info
                     const login = useLogin()
 
-                    // #ifdef MP-WEIXIN
+                     // #ifdef MP-WEIXIN || MP-TOUTIAO
                     if (memberInfo.mobile) uni.setStorageSync('wap_member_mobile', memberInfo.mobile) // 存储会员手机号，防止重复请求微信获取手机号接口
                     if (memberInfo && memberInfo.weapp_openid) {
                         uni.setStorageSync('openid', memberInfo.weapp_openid) // 授权登录后存储openid

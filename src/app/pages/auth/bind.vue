@@ -1,10 +1,10 @@
 <template>
     <view class="w-screen h-screen flex flex-col" :style="themeColor()">
-        <!-- #ifdef MP-WEIXIN -->
+          <!-- #ifndef MP-TOUTIAO -->
         <view :style="{'height':headerHeight}">
             <top-tabbar :data="param" :scrollBool="topTabarObj.getScrollBool()" class="top-header" />
         </view>
-        <!-- #endif -->
+         <!-- #endif -->
         <view class="mx-[60rpx]">
             <view class="pt-[140rpx] text-[50rpx] text-[#333]">{{ t('bindMobile') }}</view>
             <view class="text-[26rpx] leading-[39rpx] text-[var(--text-color-light6)] mt-[16rpx] mb-[80rpx]">{{ t('bindMobileTip') }}</view>

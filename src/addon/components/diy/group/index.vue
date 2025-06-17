@@ -1,6 +1,8 @@
 <template>
     <view class="diy-group" id="componentList">
+          <!-- #ifndef MP-TOUTIAO -->
         <top-tabbar :scrollBool="diyGroup.componentsScrollBool.TopTabbar" v-if="data.global && Object.keys(data.global).length && data.global.topStatusBar && data.global.topStatusBar.isShow" ref="topTabbarRef" :data="data.global" />
+          <!-- #endif -->
         <view v-for="(component, index) in data.value" :key="component.id"
         @click="diyStore.changeCurrentIndex(index, component)"
         :class="diyGroup.getComponentClass(index,component)" :style="component.pageStyle">

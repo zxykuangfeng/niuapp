@@ -21,13 +21,13 @@
 						</view>
 					</swiper-item>
 				</swiper>
-				<!-- #ifdef MP-WEIXIN -->
-				<view v-if="diyComponent.swiper.list.length > 1" :class="[
-						'swiper-dot-box',
-						{ 'straightLine': diyComponent.swiper.indicatorStyle == 'style-2' },
-						{ 'swiper-left': diyComponent.swiper.indicatorAlign == 'left' },
-						{ 'swiper-right': diyComponent.swiper.indicatorAlign == 'right' }
-					]">
+				<!-- #ifdef MP-WEIXIN || MP-TOUTIAO -->
+                                <view v-if="diyComponent.swiper.list.length > 1" :class="[
+                                                'swiper-dot-box',
+                                                { 'straightLine': diyComponent.swiper.indicatorStyle == 'style-2' },
+                                                { 'swiper-left': diyComponent.swiper.indicatorAlign == 'left' },
+                                                { 'swiper-right': diyComponent.swiper.indicatorAlign == 'right' }
+                                        ]">
 					<view v-for="(numItem, numIndex) in diyComponent.swiper.list" :key="numIndex" :class="['swiper-dot', { active: numIndex == swiperIndex }]" :style="[numIndex == swiperIndex ? { backgroundColor: diyComponent.swiper.indicatorActiveColor } : { backgroundColor: diyComponent.swiper.indicatorColor }]"></view>
 				</view>
 				<!-- #endif -->
@@ -130,7 +130,7 @@
 	isShowDots.value = true;
 	// #endif
 	
-	// #ifdef MP-WEIXIN
+	//  // #ifdef MP-WEIXIN || MP-TOUTIAO
 	isShowDots.value = false;
 	// #endif
 

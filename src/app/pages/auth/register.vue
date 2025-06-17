@@ -1,6 +1,6 @@
 <template>
     <view class="w-screen h-screen flex flex-col" :style="themeColor()" v-if="type">
-        <!-- #ifdef MP-WEIXIN -->
+            <!-- #ifndef MP-TOUTIAO -->
         <view :style="{'height':headerHeight}">
             <top-tabbar :data="param" :scrollBool="topTabarObj.getScrollBool()" class="top-header" />
         </view>
@@ -205,7 +205,7 @@ onLoad(async(option: any) => {
     uni.getStorageSync('openid') && (Object.assign(formData, { wx_openid: uni.getStorageSync('openid') }))
     // #endif
 
-    // #ifdef MP-WEIXIN
+    // #ifdef MP-WEIXIN || MP-TOUTIAO
     uni.getStorageSync('openid') && (Object.assign(formData, { weapp_openid: uni.getStorageSync('openid') }))
     // #endif
 
