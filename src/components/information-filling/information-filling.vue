@@ -197,7 +197,7 @@ const confirm = async () => {
 
 
 const checkAuth = (e, type) => {
-    // #ifdef MP-WEIXIN
+    // #ifdef MP-WEIXIN || MP-TOUTIAO
     wx.getUserInfo({
         success: function(res) {},
         fail: function(res) {

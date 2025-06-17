@@ -3,6 +3,8 @@ import {
     weappLogin,
     updateWeappOpenid,
     updateWechatOpenid,
+    toutiaoLogin,
+    updateToutiaoOpenid,
     wechatUser,
     wechatUserLogin
 } from '@/app/api/auth'
@@ -21,7 +23,7 @@ export function useLogin() {
             const config = useConfigStore()
             const systemStore = useSystemStore()
 
-            // #ifdef MP-WEIXIN
+            // #ifdef MP-WEIXIN || MP-TOUTIAO
             if (!uni.getStorageSync('autoLoginLock') && uni.getStorageSync('openid') && config.login.is_bind_mobile) {
                 uni.setStorageSync('isBindMobile', true) // 强制绑定手机号标识
             }
@@ -35,7 +37,7 @@ export function useLogin() {
 
             // 如果只开启了账号密码登录，就不需要跳转到登录中间页了，直接进入普通账号密码登录页面
 
-            // #ifdef MP-WEIXIN
+             // #ifdef MP-WEIXIN || MP-TOUTIAO
             if (config.login.is_username && !config.login.is_mobile && !config.login.is_auth_register) {
                 redirect({ url: '/app/pages/auth/login', param: { type: 'username' }, mode: 'redirectTo' })
             } else if (systemStore.initStatus == 'finish' && !config.login.is_username && !config.login.is_mobile && !config.login.is_auth_register) {
@@ -103,9 +105,10 @@ export function useLogin() {
             mobile_code: params.mobile_code
         };
 
-        // #ifdef MP-WEIXIN
+         // #ifdef MP-WEIXIN || MP-TOUTIAO
         uni.getStorageSync('pid') && (Object.assign(obj, { pid: uni.getStorageSync('pid') }))
-        weappLogin(obj).then((res: any) => {
+        const loginApi = process.env.UNI_PLATFORM === 'mp-toutiao' ? toutiaoLogin : weappLogin
+        loginApi(obj).then((res: any) => {
             if (res.data.token) {
                 useMemberStore().setToken(res.data.token, () => {
                     const config = useConfigStore()
@@ -228,12 +231,14 @@ export function useLogin() {
         };
 
         // #ifdef MP-WEIXIN
-        updateWeappOpenid(obj).then((res) => {
-            useMemberStore().getMemberInfo(() => {
-                const memberInfo = useMemberStore().info
-                memberInfo && memberInfo.weapp_openid && uni.setStorageSync('openid', memberInfo.weapp_openid)
+        const updateApi =
+        process.env.UNI_PLATFORM === 'mp-toutiao' ? updateToutiaoOpenid : updateWeappOpenid
+            updateApi(obj).then((res) => {
+                useMemberStore().getMemberInfo(() => {
+                    const memberInfo = useMemberStore().info
+                    memberInfo && memberInfo.weapp_openid && uni.setStorageSync('openid', memberInfo.weapp_openid)
+                })
             })
-        })
         // #endif
 
         // #ifdef H5
@@ -281,7 +286,26 @@ export function useLogin() {
             }
         })
         // #endif
-
+            
+        // #ifdef MP-TOUTIAO
+        tt.login({
+            success(res: any) {
+                if (res.code) {
+                    params.updateFlag ? updateOpenid(res.code) : authLogin({
+                        code: res.code,
+                        nickname: params.nickname,
+                        headimg: params.headimg,
+                        mobile: params.mobile,
+                        mobile_code: params.mobile_code,
+                        backFlag: params.backFlag,
+                        successCallback: params.successCallback
+                    })
+                } else {
+                    console.log('登录失败！' + res.errMsg)
+                }
+            }
+        })
+        // #endif
         // #ifdef H5
 
         let url = `${ location.origin }${ location.pathname }`

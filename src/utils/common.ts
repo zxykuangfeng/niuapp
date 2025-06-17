@@ -330,10 +330,14 @@ export function getAppChannel(): string {
     // #ifdef MP-WEIXIN
     return 'weapp'
     // #endif
+    // #ifdef MP-TOUTIAO
+    return 'douyin'
+    // #endif
     // #ifdef H5
     return isWeixinBrowser() ? 'wechat' : 'h5'
     // #endif
 }
+
 
 /**
  * 金额格式化

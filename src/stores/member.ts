@@ -36,7 +36,7 @@ const useMemberStore = defineStore('member', {
                     uni.setStorageSync('wap_member_mobile', this.info.mobile) // 存储会员手机号，防止重复请求微信获取手机号接口
                 }
 
-                // #ifdef MP-WEIXIN
+                 // #ifdef MP-WEIXIN || MP-TOUTIAO
                 if (this.info && this.info.weapp_openid) {
                     // 如果会员已存在则小程序端快捷登录时不再弹出授权弹框
                     uni.setStorageSync('member_exist', 1)
