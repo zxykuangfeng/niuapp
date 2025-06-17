@@ -267,7 +267,9 @@
 				    "path": "pages/member/index",
 				    "style": {
 				        "navigationBarTitleText": "%zzhc.pages.member.index%",
+                                       // #ifndef MP-TOUTIAO
 						"navigationStyle": "custom"
+                        // #endif
 				    },
 					"needLogin": true
 				},
