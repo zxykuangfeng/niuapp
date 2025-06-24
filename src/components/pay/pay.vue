@@ -112,6 +112,20 @@ const confirmPay = () => {
                 }
                 // #endif
                 break;
+                case 'douyinpay':
+                // #ifdef MP-TOUTIAO
+                uni.requestPayment({
+                    provider: 'toutiao',
+                    ...res.data,
+                    success: (res: any) => {
+                        toPayResult()
+                    },
+                    fail: (res: any) => {
+                        loading.value = false
+                    }
+                })
+                // #endif
+                break;    
             case 'alipay':
                 // #ifdef H5
                 if (isWeixinBrowser()) {

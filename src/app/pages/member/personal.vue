@@ -32,7 +32,12 @@
                             <button class="bg-transparent w-[170rpx] p-[0] rounded-[100rpx] text-[var(--primary-color)] !border-[2rpx] !border-solid border-[var(--primary-color)] text-[24rpx] h-[54rpx] flex-center"
                                 open-type="getPhoneNumber" @getphonenumber="memberStore.bindMobile">{{ t('bindMobile') }}</button>
                             <!-- #endif -->
-
+                                                        <!-- #ifdef MP-TOUTIAO -->
+                                                        <button class="bg-transparent w-[170rpx] p-[0] rounded-[100rpx] text-[var(--primary-color)] !border-[2rpx] !border-solid border-[var(--primary-color)] text-[24rpx] h-[54rpx] flex-center"
+                                open-type="getPhoneNumber" @getphonenumber="memberStore.bindMobile">
+                                {{ t('bindMobile') }}
+                            </button>
+                            <!-- #endif -->
                         </view>
                     </template>
                 </u-cell>

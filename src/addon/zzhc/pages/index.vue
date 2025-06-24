@@ -1,6 +1,6 @@
 <template>
 	<view :style="themeColor()">
-
+测试看看有没有用
 		<loading-page :loading="diy.getLoading()"></loading-page>
 
 		<view v-show="!diy.getLoading()">
