@@ -65,7 +65,8 @@
         "payFail": "支付失败",
         "completePay": "已完成支付",
         "incompletePay": "未完成支付",
-        "getting": "获取支付结果中"
+        "getting": "获取支付结果中",
+        "douyinPay": "抖音支付"
     },
     "myBalance": "我的余额",
     "myPoint": "我的积分",
