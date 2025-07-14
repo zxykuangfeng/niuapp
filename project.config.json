@@ -1,0 +1,16 @@
+{
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "postcss": false,
+      "minified": false,
+      "newFeature": true
+    },
+    "appid": "ttb99ecf2326972f8a01",
+    "projectname": "新讯理发预约",
+    "condition": {
+      "miniprogram": {
+        "current": -1
+      }
+    }
+  }
